@@ -23,7 +23,7 @@
         $password = mysqli_real_escape_string($con, $password);
         
         $query    = "INSERT into `users` (username, email, mobile_no, password)
-                     VALUES ('$username',  '$email', '$mobile_no''" . md5($password) . "')";
+                     VALUES ('$username',  '$email', '$mobile_no''" ,'". md5($password) . "')";
         $result   = mysqli_query($con, $query);
         if ($result) {
             echo "<div class='form'>
